@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define structure as node
+
 struct node {
     int info;
     struct node* next;
@@ -9,7 +9,7 @@ struct node {
 
 struct node* head = NULL;
 
-// Insert at beginning
+
 void insertFirst(int value) {
     struct node* p = (struct node*)malloc(sizeof(struct node));
     p->info = value;
@@ -18,7 +18,7 @@ void insertFirst(int value) {
     printf("%d inserted at beginning\n", value);
 }
 
-// Insert at end
+
 void insertLast(int value) {
     struct node* p = (struct node*)malloc(sizeof(struct node));
     p->info = value;
@@ -35,7 +35,7 @@ void insertLast(int value) {
     printf("%d inserted at end\n", value);
 }
 
-// Delete a node by value
+
 void deleteNode(int value) {
     struct node* p = head;
     struct node* prev = NULL;
@@ -62,7 +62,7 @@ void deleteNode(int value) {
     printf("%d deleted\n", value);
 }
 
-// Insert after a given node
+
 void insertAfterNode(int key, int value) {
     struct node* p = head;
 
@@ -81,7 +81,7 @@ void insertAfterNode(int key, int value) {
     printf("%d inserted after %d\n", value, key);
 }
 
-// Insert before a given node
+
 void insertBeforeNode(int key, int value) {
     if (head == NULL) {
         printf("List is empty\n");
@@ -113,7 +113,7 @@ void insertBeforeNode(int key, int value) {
     printf("%d inserted before %d\n", value, key);
 }
 
-// Display the linked list
+
 void display() {
     struct node* p = head;
     if (p == NULL) {
@@ -129,7 +129,7 @@ void display() {
     printf("NULL\n");
 }
 
-// Menu-driven main function
+
 int main() {
     int choice, value, key;
 
